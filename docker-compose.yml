@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: web
+    ports: 
+      - "49153:49153"
+    environment: 
+      - NODE_ENV=dev
+    command: bash -c "npm start"
